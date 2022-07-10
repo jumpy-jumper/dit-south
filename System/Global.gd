@@ -1,8 +1,11 @@
 extends Node
 
-# >>>>>>>>>>>>>>>>>>>>>>>
-# 		Settings
-# >>>>>>>>>>>>>>>>>>>>>>>
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 																					#
+# 		SETTINGS																	#
+# 																					#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 var settings : ConfigFile = ConfigFile.new()
 var savedata : ConfigFile = ConfigFile.new()
