@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://System/Global.gd" type="Script" id=1]
-[ext_resource path="res://System/Notifier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/System/Global.gd" type="Script" id=1]
+[ext_resource path="res://Source/System/Notifier.tscn" type="PackedScene" id=2]
 
 [node name="Global" type="Node"]
 script = ExtResource( 1 )

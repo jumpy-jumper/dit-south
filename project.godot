@@ -17,12 +17,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Notifier",
 "language": "GDScript",
-"path": "res://System/Notifier.gd"
+"path": "res://Source/System/Notifier.gd"
 }, {
 "base": "Reference",
 "class": "Stat",
 "language": "GDScript",
-"path": "res://System/Stat.gd"
+"path": "res://Source/System/Stat.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
@@ -36,7 +36,7 @@ config/name="Dream in Tiles 南 Soaring Harmony"
 
 [autoload]
 
-Global="*res://System/Global.tscn"
+Global="*res://Source/System/Global.tscn"
 
 [display]
 
