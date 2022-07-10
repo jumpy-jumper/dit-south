@@ -13,4 +13,5 @@ func _node_updated2():
 	print("ECHOOO: New value for {node}: ", node)
 
 func _ui_right_input(event):
-	node = randf()
+	if event.pressed:
+		Global.tween(self, "position", position, Vector2(randf()*1080, randf()*720), 0.5)
