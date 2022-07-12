@@ -33,6 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Dream in Tiles 南 Soaring Harmony"
+config/icon="res://Assets/nan.png"
 
 [autoload]
 
