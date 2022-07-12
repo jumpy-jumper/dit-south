@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/word_of_weakness.wav-19f90506637562f096e1b72443e8a89a.sample"
+
+[deps]
+
+source_file="res://Assets/BGM/word_of_weakness.wav"
+dest_files=[ "res://.import/word_of_weakness.wav-19f90506637562f096e1b72443e8a89a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

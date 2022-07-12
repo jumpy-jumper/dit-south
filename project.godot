@@ -38,6 +38,7 @@ config/icon="res://Assets/nan.png"
 [autoload]
 
 Global="*res://Source/System/Global.tscn"
+Song="*res://Source/System/Song.tscn"
 
 [display]
 

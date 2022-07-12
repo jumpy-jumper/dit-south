@@ -40,10 +40,6 @@ expand = true
 stretch_mode = 6
 flip_h = true
 
-[node name="Events" type="Node" parent="."]
-
-[node name="Message" type="Node" parent="Events"]
-
 [node name="Textbox" type="Control" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -67,3 +63,23 @@ margin_right = -32.0
 margin_bottom = -16.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit"
 scroll_active = false
+
+[node name="Events" type="Node" parent="."]
+
+[node name="BGM" type="Node" parent="Events"]
+
+[node name="FadeIn" type="Node" parent="Events"]
+
+[node name="TextboxIn" type="Node" parent="Events"]
+
+[node name="Message" type="Node" parent="Events"]
+
+[node name="Message2" type="Node" parent="Events"]
+
+[node name="TextureSwap" type="Node" parent="Events"]
+
+[node name="SFX" type="Node" parent="Events"]
+
+[node name="TextboxOut" type="Node" parent="Events"]
+
+[node name="FadeOut" type="Node" parent="Events"]
