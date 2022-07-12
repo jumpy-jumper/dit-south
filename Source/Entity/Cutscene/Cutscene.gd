@@ -32,15 +32,22 @@ func _ready_textbox():
 
 var chars = 0
 func _process_textbox(delta):
-	$Textbox/Text.visible_characters = round(chars)
-	if chars >= 0:
+	if chars < len($Textbox/Text.text):
 		chars += 50 * delta
+		if chars >= len($Textbox/Text.text):
+			advance_grace = 0.2
+	$Textbox/Text.visible_characters = round(chars)
 	$Textbox/Arrow.visible = $Textbox/Text.percent_visible >= 1
+	advance_grace -= delta
+
+var advance_grace = 0	# prevents the user from
+						# advancing textbox when they meant to fast-forward text
 
 func _advance_inputted(event):
 	if not event.pressed and waiting_for_user:
-		if $Textbox/Text.percent_visible < 1:
-			chars = -1
+		if $Textbox/Text.percent_visible < 1 or advance_grace >= 0:
+			chars = len($Textbox/Text.text)
+			advance_grace = 0
 		else:
 			waiting_for_user = false
 
