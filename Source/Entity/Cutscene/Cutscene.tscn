@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/tachie_test.png" type="Texture" id=1]
 [ext_resource path="res://Source/Entity/CutsceneEvent/BgmSwapEvent.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Source/Entity/Cutscene/Cutscene.gd" type="Script" id=5]
 [ext_resource path="res://Source/Entity/CutsceneEvent/CutsceneEvent.gd" type="Script" id=6]
 [ext_resource path="res://Source/Entity/CutsceneEvent/MessageEvent.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Arrow.png" type="Texture" id=8]
 [ext_resource path="res://Source/Entity/CutsceneEvent/FadeEvent.gd" type="Script" id=9]
 
 [node name="Cutscene" type="Control"]
@@ -68,10 +69,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 32.0
 margin_top = 16.0
-margin_right = -32.0
+margin_right = -40.0
 margin_bottom = -16.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit"
 scroll_active = false
+
+[node name="Arrow" type="TextureRect" parent="Textbox"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -44.0
+margin_top = -44.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( 18, 18 )
+texture = ExtResource( 8 )
+expand = true
 
 [node name="Events" type="Node" parent="."]
 
@@ -131,6 +145,7 @@ crossfade_out = 0.5
 script = ExtResource( 7 )
 wait_for_input = true
 message = "It's not playable yet. Get out."
+final = true
 
 [node name="TextureSwap" type="Node" parent="Events"]
 script = ExtResource( 6 )
@@ -138,15 +153,16 @@ script = ExtResource( 6 )
 [node name="SFX" type="Node" parent="Events"]
 script = ExtResource( 6 )
 
-[node name="TextboxOut" type="Node" parent="Events"]
-script = ExtResource( 9 )
-wait_for_fade = false
-fade = 1
-node = NodePath("../../Textbox")
-
 [node name="BGMOut" type="Node" parent="Events"]
 script = ExtResource( 2 )
 crossfade_out = 1.5
+
+[node name="TextboxOut" type="Node" parent="Events"]
+script = ExtResource( 9 )
+wait = 0.5
+wait_for_fade = false
+fade = 1
+node = NodePath("../../Textbox")
 
 [node name="FadeOut" type="Node" parent="Events"]
 script = ExtResource( 9 )

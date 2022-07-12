@@ -35,6 +35,7 @@ func _process_textbox(delta):
 	$Textbox/Text.visible_characters = round(chars)
 	if chars >= 0:
 		chars += 50 * delta
+	$Textbox/Arrow.visible = $Textbox/Text.percent_visible >= 1
 
 func _advance_inputted(event):
 	if not event.pressed and waiting_for_user:
@@ -43,6 +44,7 @@ func _advance_inputted(event):
 		else:
 			waiting_for_user = false
 
-func set_textbox(text):
+func set_textbox(text, final):
 	$Textbox/Text.text = text
 	chars = 0
+	$Textbox/Arrow.rect_rotation = 90 if final else 0
