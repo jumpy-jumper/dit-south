@@ -17,6 +17,8 @@ func change_bgm(bgm, crossfade = 0):
 	add_child(stream)
 	stream.play()
 
+	yield(get_tree(), "idle_frame")
+
 	Global.tween(stream, "volume_db", \
 		-80, 0, crossfade)
 	Global.tween(old, "volume_db", \
