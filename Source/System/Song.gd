@@ -8,37 +8,28 @@ const SONGS = {
 
 onready var stream := $AudioStreamPlayer
 
-func change_bgm(bgm, crossfade = 0):
+func change_bgm(bgm, crossfade_out = 0.25, crossfade_in = 0):
 	var old = stream
 
 	stream = stream.duplicate()
 	stream.stream = bgm if bgm == null else SONGS[bgm]
 	stream.volume_db = -80
+	stream.autoplay = false
 	add_child(stream)
-	stream.play()
 
-	yield(get_tree(), "idle_frame")
-
-	Global.tween(stream, "volume_db", \
-		-80, 0, crossfade)
 	Global.tween(old, "volume_db", \
-		old.volume_db, -80, crossfade)
+		old.volume_db, -80, crossfade_out)
+
+	yield(get_tree().create_timer(crossfade_out/2.0), "timeout")
+	
+	stream.play()
+	Global.tween(stream, "volume_db", \
+		-80, 0, crossfade_in)
 
 	if bgm != null:
 		$CanvasLayer/Notification/Label.text = bgm
+		$CanvasLayer/Notification/AnimationPlayer.stop()
 		$CanvasLayer/Notification/AnimationPlayer.play("enter")
 
-	yield(get_tree().create_timer(crossfade), "timeout")
+	yield(get_tree().create_timer(crossfade_in), "timeout")
 	old.queue_free()
-
-func _ui_right_input(event):
-	if event.pressed:
-		change_bgm("Boundless Color in Erratic World")
-
-func _ui_down_input(event):
-	if event.pressed:
-		change_bgm(null, 1.5)
-
-func _ui_left_input(event):
-	if event.pressed:
-		change_bgm("Distant Touch")

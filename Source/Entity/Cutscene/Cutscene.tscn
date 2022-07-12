@@ -6,10 +6,9 @@
 [ext_resource path="res://Source/System/Notifier.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Entity/Cutscene/Cutscene.gd" type="Script" id=5]
 [ext_resource path="res://Source/Entity/CutsceneEvent/CutsceneEvent.gd" type="Script" id=6]
-[ext_resource path="res://Source/Entity/CutsceneEvent/FadeEvent.gd" type="Script" id=7]
+[ext_resource path="res://Source/Entity/CutsceneEvent/FadeEvent.gd" type="Script" id=9]
 
 [node name="Cutscene" type="Control"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
@@ -75,22 +74,36 @@ scroll_active = false
 
 [node name="Events" type="Node" parent="."]
 
+[node name="Wait" type="Node" parent="Events"]
+script = ExtResource( 6 )
+wait = 1.0
+
 [node name="BGM" type="Node" parent="Events"]
 script = ExtResource( 2 )
 bgm = "Distant Touch"
 
 [node name="FadeIn" type="Node" parent="Events"]
-script = ExtResource( 7 )
+script = ExtResource( 9 )
+node = NodePath("../..")
 
 [node name="TextboxIn" type="Node" parent="Events"]
-script = ExtResource( 6 )
+script = ExtResource( 9 )
+wait_for_fade = false
+duration = 2
+node = NodePath("../../Textbox")
 
 [node name="Message" type="Node" parent="Events"]
 script = ExtResource( 6 )
 wait_for_input = true
 
+[node name="BGM2" type="Node" parent="Events"]
+script = ExtResource( 2 )
+bgm = "Word of Weakness"
+crossfade_out = 0.5
+
 [node name="Message2" type="Node" parent="Events"]
 script = ExtResource( 6 )
+wait_for_input = true
 
 [node name="TextureSwap" type="Node" parent="Events"]
 script = ExtResource( 6 )
@@ -99,12 +112,17 @@ script = ExtResource( 6 )
 script = ExtResource( 6 )
 
 [node name="TextboxOut" type="Node" parent="Events"]
-script = ExtResource( 6 )
+script = ExtResource( 9 )
+wait_for_fade = false
+fade = 1
+node = NodePath("../../Textbox")
 
 [node name="BGMOut" type="Node" parent="Events"]
 script = ExtResource( 2 )
-crossfade = 1.5
+crossfade_out = 1.5
 
 [node name="FadeOut" type="Node" parent="Events"]
-script = ExtResource( 7 )
+script = ExtResource( 9 )
 fade = 1
+duration = 4
+node = NodePath("../..")

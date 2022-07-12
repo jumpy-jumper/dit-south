@@ -8,6 +8,9 @@ var wait_t = 0
 func _ready_global():
 	Global.cutscene = self
 
+func _ready_textbox():
+	$Textbox/Text.text = ""
+
 func _process_events(delta):
 	if not waiting_for_user and wait_t <= 0:
 		if cur_event >= len(events):
@@ -28,4 +31,4 @@ func _process_events(delta):
 func _advance_inputted(event):
 	if not event.pressed:
 		waiting_for_user = false
-		wait_t = 0
+		#wait_t = 0
