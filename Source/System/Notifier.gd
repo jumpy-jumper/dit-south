@@ -32,12 +32,12 @@ func _ready():
 			if result:
 				get(["on_ready", "on_process", "on_physics_process"][i]).append(fun.name)
 
-	expr = ["^_(.+)_input", "^_(.+)_updated"]
+	expr = ["^_(.+)_inputted", "^_(.+)_updated"]
 	for i in range(len(expr)):
 		rx.compile(expr[i])
 		for fun in method_list:
 			var result := rx.search(fun.name)
-			if result and result.get_string(1) != "unhandled" and result.get_string(1) != "unhandled_key":
+			if result:
 				var property := result.get_string(1)
 				if not get(["on_input", "on_updated"][i]).has(property):
 					get(["on_input", "on_updated"][i])[property] = []
