@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/tachie_test.png" type="Texture" id=1]
 [ext_resource path="res://Source/Entity/CutsceneEvent/BgmSwapEvent.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Source/System/Notifier.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Entity/Cutscene/Cutscene.gd" type="Script" id=5]
 [ext_resource path="res://Source/Entity/CutsceneEvent/CutsceneEvent.gd" type="Script" id=6]
+[ext_resource path="res://Source/Entity/CutsceneEvent/MessageEvent.gd" type="Script" id=7]
 [ext_resource path="res://Source/Entity/CutsceneEvent/FadeEvent.gd" type="Script" id=9]
 
 [node name="Cutscene" type="Control"]
@@ -30,23 +31,23 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Left" type="TextureRect" parent="Tachie"]
-margin_left = 46.0
-margin_top = 126.0
-margin_right = 622.0
-margin_bottom = 883.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="Right" type="TextureRect" parent="Tachie"]
-margin_left = 658.0
-margin_top = 128.0
-margin_right = 1234.0
-margin_bottom = 885.0
+margin_left = -72.0
+margin_top = 64.0
+margin_right = 728.0
+margin_bottom = 1115.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 flip_h = true
+
+[node name="Right" type="TextureRect" parent="Tachie"]
+margin_left = 624.0
+margin_top = 64.0
+margin_right = 1424.0
+margin_bottom = 1115.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
 
 [node name="Textbox" type="Control" parent="."]
 anchor_top = 1.0
@@ -74,13 +75,12 @@ scroll_active = false
 
 [node name="Events" type="Node" parent="."]
 
-[node name="Wait" type="Node" parent="Events"]
-script = ExtResource( 6 )
-wait = 1.0
-
 [node name="BGM" type="Node" parent="Events"]
 script = ExtResource( 2 )
-bgm = "Distant Touch"
+bgm = "Boundless Color in Erratic World"
+
+[node name="Wait" type="Node" parent="Events"]
+script = ExtResource( 6 )
 
 [node name="FadeIn" type="Node" parent="Events"]
 script = ExtResource( 9 )
@@ -93,8 +93,34 @@ duration = 2
 node = NodePath("../../Textbox")
 
 [node name="Message" type="Node" parent="Events"]
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 wait_for_input = true
+speaker = "Test"
+message = "Welcome to the world of Dream in Tiles!"
+
+[node name="Message3" type="Node" parent="Events"]
+script = ExtResource( 7 )
+wait_for_input = true
+speaker = "Test"
+message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
+
+[node name="Message4" type="Node" parent="Events"]
+script = ExtResource( 7 )
+wait_for_input = true
+speaker = "Test"
+message = "Isn't that super cool?!"
+
+[node name="Message5" type="Node" parent="Events"]
+script = ExtResource( 7 )
+wait_for_input = true
+speaker = "Test"
+message = "..."
+
+[node name="Message6" type="Node" parent="Events"]
+script = ExtResource( 7 )
+wait_for_input = true
+speaker = "Test"
+message = "No?"
 
 [node name="BGM2" type="Node" parent="Events"]
 script = ExtResource( 2 )
@@ -102,8 +128,9 @@ bgm = "Word of Weakness"
 crossfade_out = 0.5
 
 [node name="Message2" type="Node" parent="Events"]
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 wait_for_input = true
+message = "It's not playable yet. Get out."
 
 [node name="TextureSwap" type="Node" parent="Events"]
 script = ExtResource( 6 )

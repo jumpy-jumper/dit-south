@@ -1,5 +1,6 @@
 extends Node
 
+
 const SONGS = {
 	"Boundless Color in Erratic World" : preload("res://Assets/BGM/boundless_color_f#m.wav"),
 	"Word of Weakness" : preload("res://Assets/BGM/word_of_weakness.wav"),
