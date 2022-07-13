@@ -88,14 +88,15 @@ func _advance_inputted(event):
 var skip_t = 0
 func _process_skip(delta):
 	if Input.is_action_pressed("skip"):
-		if skip_t < 0:
-			waiting_for_user = false
-			wait_t = 0
-			skip_t = Global.settings.get_value("cutscene", "skip_delay", 0.05)
-		var objects = [self, $Textbox, Song.stream]
-		for obj in objects:
-			Global.finish_all_tweens(obj)
-		chars = len($Textbox/Text.text)
+		if Global.savedata.get_value("cutscene_progress", name, 0) > cur_event or Global.settings.get_value("cutscene", "skip_unread", false):
+			if skip_t < 0:
+				waiting_for_user = false
+				wait_t = 0
+				skip_t = Global.settings.get_value("cutscene", "skip_delay", 0.05)
+			var objects = [self, $Textbox, Song.stream]
+			for obj in objects:
+				Global.finish_all_tweens(obj)
+			chars = len($Textbox/Text.text)
 	skip_t -= delta
 
 func set_textbox(text, final):
