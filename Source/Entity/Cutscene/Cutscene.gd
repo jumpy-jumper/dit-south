@@ -1,12 +1,25 @@
 extends Control
 
-onready var events = $Events.get_children()
-var cur_event = 0
-var waiting_for_user := false
-var wait_t = 0
-
 func _ready_global():
 	Global.cutscene = self
+
+# Events
+
+var events = []
+var cur_event = 0
+
+func _ready_events():
+	add_events($Events)
+
+func add_events(node):
+	if node.get_child_count() > 0:
+		for c in node.get_children():
+			add_events(c)
+	else:
+		events.append(node)
+
+var waiting_for_user := false
+var wait_t = 0
 
 func _process_events(delta):
 	if not waiting_for_user and wait_t <= 0:
@@ -15,7 +28,7 @@ func _process_events(delta):
 			print("Goodbye")
 		else:
 			events[cur_event].execute()
-			print("Triggered event: ", events[cur_event].name)
+			print("[" + str(cur_event) + "] Triggered event: ", events[cur_event].name)
 			wait_t = events[cur_event].wait
 			if wait_t:
 				print("Waiting for " + str(wait_t) + "s...")
@@ -24,6 +37,18 @@ func _process_events(delta):
 				print("Waiting for input...")
 			cur_event += 1
 	wait_t -= delta
+
+# Loading
+
+func _ready_load():
+	yield(get_tree(), "idle_frame")
+
+func load_to_idx(idx):
+	for i in range(idx - cur_event):
+		events[cur_event].execute()
+		print("[" + str(cur_event) + "] Triggered event: ", events[cur_event].name)
+		cur_event += 1
+		waiting_for_user = events[cur_event].wait_for_input
 
 # Textbox
 

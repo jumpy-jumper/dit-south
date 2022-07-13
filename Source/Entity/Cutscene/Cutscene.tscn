@@ -106,241 +106,243 @@ wait_for_fade = false
 duration = 2
 node = NodePath("../../Textbox")
 
-[node name="Message" type="Node" parent="Events"]
+[node name="Messages" type="Node" parent="Events"]
+
+[node name="Message" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message3" type="Node" parent="Events"]
+[node name="Message3" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message4" type="Node" parent="Events"]
+[node name="Message4" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message5" type="Node" parent="Events"]
+[node name="Message5" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message6" type="Node" parent="Events"]
+[node name="Message6" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message7" type="Node" parent="Events"]
+[node name="Message7" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message8" type="Node" parent="Events"]
+[node name="Message8" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message9" type="Node" parent="Events"]
+[node name="Message9" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message10" type="Node" parent="Events"]
+[node name="Message10" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message11" type="Node" parent="Events"]
+[node name="Message11" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message52" type="Node" parent="Events"]
+[node name="Message52" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message53" type="Node" parent="Events"]
+[node name="Message53" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message54" type="Node" parent="Events"]
+[node name="Message54" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message55" type="Node" parent="Events"]
+[node name="Message55" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message56" type="Node" parent="Events"]
+[node name="Message56" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message57" type="Node" parent="Events"]
+[node name="Message57" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message58" type="Node" parent="Events"]
+[node name="Message58" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message59" type="Node" parent="Events"]
+[node name="Message59" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message60" type="Node" parent="Events"]
+[node name="Message60" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message61" type="Node" parent="Events"]
+[node name="Message61" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message62" type="Node" parent="Events"]
+[node name="Message62" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message63" type="Node" parent="Events"]
+[node name="Message63" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message64" type="Node" parent="Events"]
+[node name="Message64" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message65" type="Node" parent="Events"]
+[node name="Message65" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message66" type="Node" parent="Events"]
+[node name="Message66" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message67" type="Node" parent="Events"]
+[node name="Message67" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message68" type="Node" parent="Events"]
+[node name="Message68" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message69" type="Node" parent="Events"]
+[node name="Message69" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message70" type="Node" parent="Events"]
+[node name="Message70" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message71" type="Node" parent="Events"]
+[node name="Message71" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message72" type="Node" parent="Events"]
+[node name="Message72" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message73" type="Node" parent="Events"]
+[node name="Message73" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message74" type="Node" parent="Events"]
+[node name="Message74" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message75" type="Node" parent="Events"]
+[node name="Message75" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message76" type="Node" parent="Events"]
+[node name="Message76" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message77" type="Node" parent="Events"]
+[node name="Message77" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message78" type="Node" parent="Events"]
+[node name="Message78" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message79" type="Node" parent="Events"]
+[node name="Message79" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message80" type="Node" parent="Events"]
+[node name="Message80" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message81" type="Node" parent="Events"]
+[node name="Message81" type="Node" parent="Events/Messages"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
@@ -351,241 +353,243 @@ script = ExtResource( 2 )
 bgm = "Word of Weakness"
 crossfade_out = 0.5
 
-[node name="Message12" type="Node" parent="Events"]
+[node name="Messages2" type="Node" parent="Events"]
+
+[node name="Message" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message13" type="Node" parent="Events"]
+[node name="Message3" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message14" type="Node" parent="Events"]
+[node name="Message4" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message15" type="Node" parent="Events"]
+[node name="Message5" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message16" type="Node" parent="Events"]
+[node name="Message6" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message17" type="Node" parent="Events"]
+[node name="Message7" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message18" type="Node" parent="Events"]
+[node name="Message8" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message19" type="Node" parent="Events"]
+[node name="Message9" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message20" type="Node" parent="Events"]
+[node name="Message10" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message21" type="Node" parent="Events"]
+[node name="Message11" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message22" type="Node" parent="Events"]
+[node name="Message52" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message23" type="Node" parent="Events"]
+[node name="Message53" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message24" type="Node" parent="Events"]
+[node name="Message54" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message25" type="Node" parent="Events"]
+[node name="Message55" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message26" type="Node" parent="Events"]
+[node name="Message56" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message27" type="Node" parent="Events"]
+[node name="Message57" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message28" type="Node" parent="Events"]
+[node name="Message58" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message29" type="Node" parent="Events"]
+[node name="Message59" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message30" type="Node" parent="Events"]
+[node name="Message60" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message31" type="Node" parent="Events"]
+[node name="Message61" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message32" type="Node" parent="Events"]
+[node name="Message62" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message33" type="Node" parent="Events"]
+[node name="Message63" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message34" type="Node" parent="Events"]
+[node name="Message64" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message35" type="Node" parent="Events"]
+[node name="Message65" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message36" type="Node" parent="Events"]
+[node name="Message66" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message37" type="Node" parent="Events"]
+[node name="Message67" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message38" type="Node" parent="Events"]
+[node name="Message68" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message39" type="Node" parent="Events"]
+[node name="Message69" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message40" type="Node" parent="Events"]
+[node name="Message70" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message41" type="Node" parent="Events"]
+[node name="Message71" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message42" type="Node" parent="Events"]
+[node name="Message72" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message43" type="Node" parent="Events"]
+[node name="Message73" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message44" type="Node" parent="Events"]
+[node name="Message74" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message45" type="Node" parent="Events"]
+[node name="Message75" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message46" type="Node" parent="Events"]
+[node name="Message76" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "No?"
 
-[node name="Message47" type="Node" parent="Events"]
+[node name="Message77" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Welcome to the world of Dream in Tiles!"
 
-[node name="Message48" type="Node" parent="Events"]
+[node name="Message78" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "This game will literally READ the FREQUENCIES of the music being played to create an epic platform for DPS optimization where you have to match what you play to the music!"
 
-[node name="Message49" type="Node" parent="Events"]
+[node name="Message79" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "Isn't that super cool?!"
 
-[node name="Message50" type="Node" parent="Events"]
+[node name="Message80" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
 message = "..."
 
-[node name="Message51" type="Node" parent="Events"]
+[node name="Message81" type="Node" parent="Events/Messages2"]
 script = ExtResource( 7 )
 wait_for_input = true
 speaker = "Test"
