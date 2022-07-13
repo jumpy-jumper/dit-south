@@ -50,6 +50,11 @@ func load_to_idx(idx):
 		cur_event += 1
 		waiting_for_user = events[cur_event].wait_for_input
 
+# Saving
+
+func _process_furthest_reached(delta):
+	Global.savedata.set_value("cutscene_progress", name, max(Global.savedata.get_value("cutscene_progress", name, 0), cur_event))
+
 # Textbox
 
 func _ready_textbox():
@@ -62,6 +67,7 @@ func _process_textbox(delta):
 		if chars >= len($Textbox/Text.text):
 			advance_grace = Global.settings.get_value("cutscene", "advance_grace", 0.2)
 	$Textbox/Text.visible_characters = round(chars)
+	$Textbox/Text.modulate = Color.white if (Global.savedata.get_value("cutscene_progress", name, 0) <= cur_event) else Global.settings.get_value("cutscene", "read_text_color", Color.lightblue)
 	$Textbox/Arrow.visible = $Textbox/Text.percent_visible >= 1
 	advance_grace -= delta
 

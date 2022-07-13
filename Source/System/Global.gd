@@ -9,6 +9,14 @@ extends Node
 var settings := ConfigFile.new()
 var savedata := ConfigFile.new()
 
+func _ready_userdata():
+	settings.load("user://settings.cfg")
+	savedata.load("user://save0.dit")
+
+func _exit_tree():
+	settings.save("user://settings.cfg")
+	savedata.save("user://save0.dit")
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 																					#
