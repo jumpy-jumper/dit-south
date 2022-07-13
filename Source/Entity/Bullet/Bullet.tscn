@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Source/Entity/Bullet/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Assets/square.png" type="Texture" id=2]
+[ext_resource path="res://Source/System/Notifier.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+	if (length(UV*2f-1f)>1f) {
+		COLOR = vec4(1,1,1,0);
+	} else {
+		COLOR = vec4(1,1,1,1);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 12.0
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Notifier" parent="." instance=ExtResource( 3 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )

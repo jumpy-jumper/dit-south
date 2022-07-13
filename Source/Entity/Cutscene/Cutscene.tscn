@@ -147,9 +147,6 @@ wait_for_input = true
 message = "It's not playable yet. Get out."
 final = true
 
-[node name="SFX" type="Node" parent="Events"]
-script = ExtResource( 6 )
-
 [node name="BGMOut" type="Node" parent="Events"]
 script = ExtResource( 2 )
 crossfade_out = 4
