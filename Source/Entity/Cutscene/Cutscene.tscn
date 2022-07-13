@@ -98,13 +98,13 @@ script = ExtResource( 6 )
 
 [node name="FadeIn" type="Node" parent="Events"]
 script = ExtResource( 9 )
-node = NodePath("../..")
+node_to_fade = NodePath("../..")
 
 [node name="TextboxIn" type="Node" parent="Events"]
 script = ExtResource( 9 )
 wait_for_fade = false
 duration = 2
-node = NodePath("../../Textbox")
+node_to_fade = NodePath("../../Textbox")
 
 [node name="Messages" type="Node" parent="Events"]
 
@@ -351,7 +351,12 @@ message = "No?"
 [node name="BGM2" type="Node" parent="Events"]
 script = ExtResource( 2 )
 bgm = "Word of Weakness"
-crossfade_out = 0.5
+crossfade_out = 3
+
+[node name="BGM3" type="Node" parent="Events"]
+script = ExtResource( 2 )
+bgm = "Distant Touch"
+crossfade_out = 3
 
 [node name="Messages2" type="Node" parent="Events"]
 
@@ -609,17 +614,17 @@ script = ExtResource( 6 )
 
 [node name="BGMOut" type="Node" parent="Events"]
 script = ExtResource( 2 )
-crossfade_out = 1.5
+crossfade_out = 4
 
 [node name="TextboxOut" type="Node" parent="Events"]
 script = ExtResource( 9 )
 wait = 0.5
 wait_for_fade = false
 fade = 1
-node = NodePath("../../Textbox")
+node_to_fade = NodePath("../../Textbox")
 
 [node name="FadeOut" type="Node" parent="Events"]
 script = ExtResource( 9 )
 fade = 1
 duration = 4
-node = NodePath("../..")
+node_to_fade = NodePath("../..")
