@@ -34,7 +34,7 @@ var cutscene = null
 
 var _tween_cache: = {}
 
-func tween(object, property, initial, final, duration, override=true):
+func tween(object, property, initial, final, duration, trans = Tween.TRANS_LINEAR, override=true):
 	if not _tween_cache.has(object):
 		_tween_cache[object] = {}
 	elif _tween_cache[object].has(property):

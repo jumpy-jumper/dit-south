@@ -19,18 +19,18 @@ func change_bgm(bgm, crossfade_out = 0.25, crossfade_in = 0):
 	add_child(stream)
 
 	Global.tween(old, "volume_db", \
-		old.volume_db, -80, crossfade_out)
-
-	yield(get_tree().create_timer(crossfade_out/2.0), "timeout")
+		old.volume_db, -80, crossfade_out, Tween.TRANS_QUAD)
 	
 	stream.play()
 	Global.tween(stream, "volume_db", \
-		-80, 0, crossfade_in)
+		-80, 0, crossfade_in, Tween.TRANS_QUAD)
 
 	if bgm != null:
 		$CanvasLayer/Notification/Label.text = bgm
 		$CanvasLayer/Notification/AnimationPlayer.stop()
 		$CanvasLayer/Notification/AnimationPlayer.play("enter")
 
-	yield(get_tree().create_timer(crossfade_in), "timeout")
+	print(crossfade_out)
+
+	yield(get_tree().create_timer(crossfade_out), "timeout")
 	old.queue_free()
