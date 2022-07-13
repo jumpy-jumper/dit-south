@@ -6,8 +6,9 @@ extends Node
 # 																					#
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-var settings : ConfigFile = ConfigFile.new()
-var savedata : ConfigFile = ConfigFile.new()
+var settings := ConfigFile.new()
+var savedata := ConfigFile.new()
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 																					#
@@ -42,7 +43,7 @@ func tween(object, property, initial, final, duration, override=true):
 	_tween_cache[object][property] = tween
 	tween.start()
 
-	yield(get_tree().create_timer(duration), "timeout")
+	yield(tween, "tween_all_completed")
 
 	if _tween_cache.has(object):
 		if not is_instance_valid(object):
@@ -56,7 +57,16 @@ func tween(object, property, initial, final, duration, override=true):
 			if _tween_cache[object].empty():
 				_tween_cache.erase(object)
 
-func stop_all(object):
+func finish_all_tweens(object):
+	if _tween_cache.has(object):
+		for property in _tween_cache[object]:
+			_tween_cache[object][property].seek(_tween_cache[object][property].get_runtime())
+
+func finish_tween(object, property):
+	if _tween_cache.has(object) and _tween_cache[object].has(property):
+		_tween_cache[object][property].seek(_tween_cache[object][property].get_runtime())
+
+func stop_all_tweens(object):
 	if _tween_cache.has(object):
 		for property in _tween_cache[object]:
 			if is_instance_valid(property):
@@ -64,7 +74,7 @@ func stop_all(object):
 				_tween_cache[property].queue_free()
 	_tween_cache.erase(object)
 
-func stop(object, property):
+func stop_tween(object, property):
 	if _tween_cache.has(object) and _tween_cache[object].has(property):
 			if is_instance_valid(property):
 				_tween_cache[property].stop_all()

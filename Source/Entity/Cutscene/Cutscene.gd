@@ -33,9 +33,9 @@ func _ready_textbox():
 var chars = 0
 func _process_textbox(delta):
 	if chars < len($Textbox/Text.text):
-		chars += 50 * delta
+		chars += Global.settings.get_value("cutscene", "text_speed", 50) * delta
 		if chars >= len($Textbox/Text.text):
-			advance_grace = 0.2
+			advance_grace = Global.settings.get_value("cutscene", "advance_grace", 0.2)
 	$Textbox/Text.visible_characters = round(chars)
 	$Textbox/Arrow.visible = $Textbox/Text.percent_visible >= 1
 	advance_grace -= delta
@@ -44,12 +44,28 @@ var advance_grace = 0	# prevents the user from
 						# advancing textbox when they meant to fast-forward text
 
 func _advance_inputted(event):
-	if not event.pressed and waiting_for_user:
-		if $Textbox/Text.percent_visible < 1 or advance_grace >= 0:
-			chars = len($Textbox/Text.text)
-			advance_grace = 0
-		else:
+	if not event.pressed:
+		if waiting_for_user:
+			if $Textbox/Text.percent_visible < 1 or advance_grace >= 0:
+				chars = len($Textbox/Text.text)
+				advance_grace = 0
+			else:
+				waiting_for_user = false
+				if wait_t > 0 and Global.settings.get_value("cutscene", "allow_skipping_wait", false):
+					wait_t = 0
+
+var skip_t = 0
+func _process_skip(delta):
+	if Input.is_action_pressed("skip"):
+		if skip_t < 0:
 			waiting_for_user = false
+			wait_t = 0
+			skip_t = Global.settings.get_value("cutscene", "skip_delay", 0.05)
+		var objects = [self, $Textbox, Song.stream]
+		for obj in objects:
+			Global.finish_all_tweens(obj)
+		chars = len($Textbox/Text.text)
+	skip_t -= delta
 
 func set_textbox(text, final):
 	$Textbox/Text.text = text
