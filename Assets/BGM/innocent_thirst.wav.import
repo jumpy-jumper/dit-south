@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/innocent_thirst.wav-e0bc7a07f604112392ee5758a9983544.sample"
+
+[deps]
+
+source_file="res://Assets/BGM/innocent_thirst.wav"
+dest_files=[ "res://.import/innocent_thirst.wav-e0bc7a07f604112392ee5758a9983544.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
