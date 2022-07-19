@@ -88,6 +88,7 @@ func recalculate_state():
 			hsh = value.hash()
 		if value is Stat:
 			hsh = value.val
+			print(hsh)
 		if hsh != last_state[property]:
 			last_state[property] = hsh
 			properties_changed[property] = value
