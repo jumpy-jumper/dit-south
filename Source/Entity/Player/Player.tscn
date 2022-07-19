@@ -85,3 +85,11 @@ margin_right = -32.0
 margin_bottom = -358.0
 text = "10000 / 10000"
 align = 2
+
+[node name="Key" type="Control" parent="UI/Panel"]
+margin_left = 48.0
+margin_top = 488.0
+margin_right = 240.0
+margin_bottom = 680.0
+
+[node name="Line2D" type="Line2D" parent="UI/Panel/Key"]
