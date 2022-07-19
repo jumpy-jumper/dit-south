@@ -1,15 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Source/Entity/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Source/System/Notifier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Player.png" type="Texture" id=3]
+[ext_resource path="res://Assets/banner_sophie.png" type="Texture" id=4]
+[ext_resource path="res://Assets/default_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Assets/rounded_rectangle_gradient.png" type="Texture" id=6]
+[ext_resource path="res://Assets/square.png" type="Texture" id=7]
+[ext_resource path="res://Assets/heart-beats.png" type="Texture" id=8]
+[ext_resource path="res://Source/Entity/Health/Health.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Player" type="Area2D"]
+position = Vector2( 704, 512 )
 script = ExtResource( 1 )
 
 [node name="Notifier" parent="." instance=ExtResource( 2 )]
+
+[node name="Health" parent="." instance=ExtResource( 9 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.7, 0.7 )
@@ -17,3 +26,62 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Control" parent="UI"]
+anchor_bottom = 1.0
+margin_right = 280.0
+
+[node name="Banner" type="TextureRect" parent="UI/Panel"]
+self_modulate = Color( 0.309804, 0.309804, 0.309804, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -176, -88 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="HPBar" type="TextureProgress" parent="UI/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = 310.0
+margin_right = -24.0
+margin_bottom = -390.0
+value = 50.0
+texture_under = ExtResource( 6 )
+texture_over = ExtResource( 7 )
+texture_progress = ExtResource( 6 )
+fill_mode = 1
+tint_under = Color( 0.223529, 0.223529, 0.223529, 1 )
+tint_over = Color( 0.25098, 0.25098, 0.25098, 0 )
+tint_progress = Color( 0, 0.490196, 0, 1 )
+nine_patch_stretch = true
+stretch_margin_left = 32
+stretch_margin_right = 32
+
+[node name="HPIcon" type="TextureRect" parent="UI/Panel"]
+modulate = Color( 0.552941, 1, 0.552941, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = -56.0
+margin_right = 132.0
+margin_bottom = -24.0
+theme = ExtResource( 5 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="HPValue" type="Label" parent="UI/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = 336.0
+margin_right = -32.0
+margin_bottom = -358.0
+text = "10000 / 10000"
+align = 2

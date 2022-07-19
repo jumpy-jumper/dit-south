@@ -29,7 +29,6 @@ func recalculate():
 	var post = 0
 	var add_mul = 1
 	var mul_mul = 1
-	print(len(mods))
 	for mod in mods.values():
 		match(mod.type):
 			ModType.PRE_ADDITIVE:
